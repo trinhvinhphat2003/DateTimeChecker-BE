@@ -137,5 +137,7 @@ class DateTimeCheckerIntegrationTests {
 		String year = webDriver.findElement(By.id("inputYear")).getAttribute("value");
 		assertEquals("day is not in correct formart", result);
 	}
+	//lab 2 test check date in month
+	
 
 }

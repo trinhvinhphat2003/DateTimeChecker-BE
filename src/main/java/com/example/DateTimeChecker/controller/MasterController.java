@@ -65,6 +65,25 @@ public class MasterController {
 		}
 		return true;
 	}
+	
+	private int checkDateInMonth(Integer month, Integer year) {
+		ArrayList<Integer> monthHave30 = new ArrayList<>();
+		monthHave30.add(4);
+		monthHave30.add(6);
+		monthHave30.add(9);
+		monthHave30.add(11);
+		if(monthHave30.contains(Integer.valueOf(month))) {
+			return 30;
+		}
+		if(month == 2) {
+			if(!isLeapYear(year)) {
+				return 28;
+			} else {
+				return 29;
+			}
+		}
+		return 31;
+	}
 
 
 	private boolean isLeapYear(Integer year) {
