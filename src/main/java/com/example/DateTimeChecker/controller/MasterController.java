@@ -69,6 +69,7 @@ public class MasterController {
 	}
 
 	public int checkDateInMonth(Integer month, Integer year) {
+		if(month == null || year == null) return -1;
 		if (month >= 1 && month <= 12) {
 			ArrayList<Integer> monthHave30 = new ArrayList<>();
 			monthHave30.add(4);
