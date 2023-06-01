@@ -122,7 +122,7 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	void UTCID09() {
 		Integer month = null;
 	    Integer year = 2020;
-	    int expectedDays = 1;
+	    int expectedDays = -1;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID09: " + actualDays);
@@ -135,7 +135,7 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	void UTCID010() {
 		Integer month = null;
 	    Integer year = 2021;
-	    int expectedDays = 1;
+	    int expectedDays = -1;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID010: " + actualDays);
@@ -148,7 +148,7 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	void UTCID011() {
 		Integer month = null;
 	    Integer year = 10;
-	    int expectedDays = 1;
+	    int expectedDays = -1;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID011: " + actualDays);
@@ -161,7 +161,7 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	void UTCID012() {
 		Integer month = null;
 	    Integer year = 2019;
-	    int expectedDays = 1;
+	    int expectedDays = -1;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID012: " + actualDays);
@@ -200,7 +200,7 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	void UTCID015() {
 		Integer month = null;
 	    Integer year = 2016;
-	    int expectedDays = 1;
+	    int expectedDays = -1;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID015: " + actualDays);

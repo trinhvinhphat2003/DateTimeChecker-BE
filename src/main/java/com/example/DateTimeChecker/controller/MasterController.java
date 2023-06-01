@@ -46,7 +46,7 @@ public class MasterController {
 
 	}
 
-	private boolean isCorrectDateTime(Integer day, Integer month, Integer year) {
+	public boolean isCorrectDateTime(Integer day, Integer month, Integer year) {
 		ArrayList<Integer> monthHave30 = new ArrayList<>();
 		monthHave30.add(4);
 		monthHave30.add(6);
