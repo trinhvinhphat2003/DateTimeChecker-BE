@@ -39,16 +39,20 @@ class DateTimeCheckerIntegrationTests {
 		webDriver.findElement(By.id("checkBtn")).click();
 		Thread.sleep(1000);
 		
-		Alert alert = webDriver.switchTo().alert();
-		
-		String result = alert.getText();
-		alert.accept();
-		
-		webDriver.switchTo().defaultContent();
+//		Alert alert = webDriver.switchTo().alert();
+//		
+//		String result = alert.getText();
+//		alert.accept();
+//		
+//		webDriver.switchTo().defaultContent();
 		String day = webDriver.findElement(By.id("inputDay")).getAttribute("value");
 		String month = webDriver.findElement(By.id("inputMonth")).getAttribute("value");
 		String year = webDriver.findElement(By.id("inputYear")).getAttribute("value");
+		String result = webDriver.findElement(By.id("result")).getText();
+		
 		assertEquals(day + "/" + month + "/" + year + " is not correct date time !", result);
+		webDriver.quit();
+		
 	}
 	
 	@Test
@@ -68,16 +72,19 @@ class DateTimeCheckerIntegrationTests {
 		webDriver.findElement(By.id("checkBtn")).click();
 		Thread.sleep(1000);
 		
-		Alert alert = webDriver.switchTo().alert();
-		
-		String result = alert.getText();
-		alert.accept();
-		
-		webDriver.switchTo().defaultContent();
+//		Alert alert = webDriver.switchTo().alert();
+//		
+//		String result = alert.getText();
+//		alert.accept();
+//		
+//		webDriver.switchTo().defaultContent();
 		String day = webDriver.findElement(By.id("inputDay")).getAttribute("value");
 		String month = webDriver.findElement(By.id("inputMonth")).getAttribute("value");
 		String year = webDriver.findElement(By.id("inputYear")).getAttribute("value");
+		String result = webDriver.findElement(By.id("result")).getText();
+		
 		assertEquals(day + "/" + month + "/" + year + " is correct date time !", result);
+		webDriver.quit();
 	}
 	
 	@Test
@@ -97,16 +104,19 @@ class DateTimeCheckerIntegrationTests {
 		webDriver.findElement(By.id("checkBtn")).click();
 		Thread.sleep(1000);
 		
-		Alert alert = webDriver.switchTo().alert();
-		
-		String result = alert.getText();
-		alert.accept();
-		
-		webDriver.switchTo().defaultContent();
+//		Alert alert = webDriver.switchTo().alert();
+//		
+//		String result = alert.getText();
+//		alert.accept();
+//		
+//		webDriver.switchTo().defaultContent();
 		String day = webDriver.findElement(By.id("inputDay")).getAttribute("value");
 		String month = webDriver.findElement(By.id("inputMonth")).getAttribute("value");
 		String year = webDriver.findElement(By.id("inputYear")).getAttribute("value");
+		String result = webDriver.findElement(By.id("result")).getText();
+		
 		assertEquals("day is not in range", result);
+		webDriver.quit();
 	}
 	
 	@Test
@@ -126,16 +136,19 @@ class DateTimeCheckerIntegrationTests {
 		webDriver.findElement(By.id("checkBtn")).click();
 		Thread.sleep(1000);
 		
-		Alert alert = webDriver.switchTo().alert();
-		
-		String result = alert.getText();
-		alert.accept();
-		
-		webDriver.switchTo().defaultContent();
+//		Alert alert = webDriver.switchTo().alert();
+//		
+//		String result = alert.getText();
+//		alert.accept();
+//		
+//		webDriver.switchTo().defaultContent();
 		String day = webDriver.findElement(By.id("inputDay")).getAttribute("value");
 		String month = webDriver.findElement(By.id("inputMonth")).getAttribute("value");
 		String year = webDriver.findElement(By.id("inputYear")).getAttribute("value");
+		String result = webDriver.findElement(By.id("result")).getText();
+		
 		assertEquals("day is not in correct formart", result);
+		webDriver.quit();
 	}
 
 	
