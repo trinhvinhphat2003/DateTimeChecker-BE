@@ -47,30 +47,31 @@ public class MasterController {
 	}
 
 	public boolean isCorrectDateTime(Integer day, Integer month, Integer year) {
-		ArrayList<Integer> monthHave30 = new ArrayList<>();
-		monthHave30.add(4);
-		monthHave30.add(6);
-		monthHave30.add(9);
-		monthHave30.add(11);
-		if (monthHave30.contains(Integer.valueOf(month))) {
-			if (day > 30)
-				return false;
-		}
-		if (month == 2) {
-			if (!isLeapYear(year)) {
-				if (day > 28)
-					return false;
-			} else {
-				if (day > 29)
-					return false;
-			}
-		}
+		if(!(day >= 1 && day <= checkDateInMonth(month, year))) return false; 
 		return true;
+//		ArrayList<Integer> monthHave30 = new ArrayList<>();
+//		monthHave30.add(4);
+//		monthHave30.add(6);
+//		monthHave30.add(9);
+//		monthHave30.add(11);
+//		if (monthHave30.contains(Integer.valueOf(month))) {
+//			if (day > 30)
+//				return false;
+//		}
+//		if (month == 2) {
+//			if (!isLeapYear(year)) {
+//				if (day > 28)
+//					return false;
+//			} else {
+//				if (day > 29)
+//					return false;
+//			}
+//		}
 	}
-
+//null -1, not in range 0
 	public int checkDateInMonth(Integer month, Integer year) {
 		if(month == null || year == null) return -1;
-		if (month >= 1 && month <= 12) {
+		if ((month >= 1 && month <= 12) && (year >= 1000 && year <= 3000)) {
 			ArrayList<Integer> monthHave30 = new ArrayList<>();
 			monthHave30.add(4);
 			monthHave30.add(6);
@@ -94,7 +95,7 @@ public class MasterController {
 		if (year % 400 == 0)
 			return true;
 		else if (year % 100 == 0)
-			return false;
+			return true;//false
 		else if (year % 4 == 0)
 			return true;
 		return false;

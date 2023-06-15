@@ -18,9 +18,9 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	@Test
 	@DisplayName("UTCID01")
 	void UTCID01() {
-		Integer month = 1;
+		Integer month = 2;
 	    Integer year = 2020;
-	    int expectedDays = 31;
+	    int expectedDays = 29;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID01: " + actualDays);
@@ -45,7 +45,7 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	@DisplayName("UTCID03")
 	void UTCID03() {
 		Integer month = 2;
-	    Integer year = 2019;
+	    Integer year = 1000;
 	    int expectedDays = 28;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
@@ -58,8 +58,8 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	@DisplayName("UTCID04")
 	void UTCID04() {
 		Integer month = 2;
-	    Integer year = 2019;
-	    int expectedDays = 28;
+	    Integer year = -100;
+	    int expectedDays = 0;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID04: " + actualDays);
@@ -82,8 +82,8 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	@DisplayName("UTCID06")
 	void UTCID06() {
 		Integer month = 1;
-	    Integer year = 2019;
-	    int expectedDays = 28;
+	    Integer year = 9001;
+	    int expectedDays = 0;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID06: " + actualDays);
@@ -95,8 +95,8 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	@DisplayName("UTCID07")
 	void UTCID07() {
 		Integer month = 1;
-	    Integer year = 10;
-	    int expectedDays = 28;
+	    Integer year = 1000;
+	    int expectedDays = 31;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID07: " + actualDays);
@@ -108,8 +108,8 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	@DisplayName("UTCID08")
 	void UTCID08() {
 		Integer month = 2;
-	    Integer year = 10;
-	    int expectedDays = 28;
+	    Integer year = 9001;
+	    int expectedDays = 0;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID08: " + actualDays);
@@ -147,7 +147,7 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	@DisplayName("UTCID011")
 	void UTCID011() {
 		Integer month = null;
-	    Integer year = 10;
+	    Integer year = 1000;
 	    int expectedDays = -1;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
@@ -160,7 +160,7 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	@DisplayName("UTCID012")
 	void UTCID012() {
 		Integer month = null;
-	    Integer year = 2019;
+	    Integer year = -100;
 	    int expectedDays = -1;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
@@ -172,9 +172,9 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	@Test
 	@DisplayName("UTCID013")
 	void UTCID013() {
-		Integer month = 2;
-	    Integer year = 2014;
-	    int expectedDays = 31;
+		Integer month = 14;
+	    Integer year = 2021;
+	    int expectedDays = 0;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID013: " + actualDays);
@@ -185,9 +185,9 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	@Test
 	@DisplayName("UTCID014")
 	void UTCID014() {
-		Integer month = 1;
-	    Integer year = 2015;
-	    int expectedDays = 31;
+		Integer month = -5;
+	    Integer year = 2021;
+	    int expectedDays = 0;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID014: " + actualDays);
@@ -198,9 +198,9 @@ public class DateTimeCheckerUnitTestsCheckDateInMonth {
 	@Test
 	@DisplayName("UTCID015")
 	void UTCID015() {
-		Integer month = null;
-	    Integer year = 2016;
-	    int expectedDays = -1;
+		Integer month = 1;
+	    Integer year = -100;
+	    int expectedDays = 0;
 	    
 	    int actualDays = masterController.checkDateInMonth(month, year);
 	    System.out.println("actual output of UTCID015: " + actualDays);

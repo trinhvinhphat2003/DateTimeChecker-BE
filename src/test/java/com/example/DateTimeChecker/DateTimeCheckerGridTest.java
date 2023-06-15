@@ -74,13 +74,12 @@ public class DateTimeCheckerGridTest {
 //			alert.accept();
 //			
 //			webDriver.switchTo().defaultContent();
-			
 			String day = webDriver.findElement(By.id("inputDay")).getAttribute("value");
 			String month = webDriver.findElement(By.id("inputMonth")).getAttribute("value");
 			String year = webDriver.findElement(By.id("inputYear")).getAttribute("value");
 			String result = webDriver.findElement(By.id("result")).getText();
 			
-			assertEquals(day + "/" + month + "/" + year + " is not correct date time !", result);
+			assertEquals(day + "/" + month + "/" + year + " is correct date time !", result);
 			webDriver.quit();
 		} catch (MalformedURLException | InterruptedException e) {
 			// TODO Auto-generated catch block
